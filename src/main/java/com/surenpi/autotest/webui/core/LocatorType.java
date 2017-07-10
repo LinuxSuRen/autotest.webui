@@ -25,7 +25,41 @@ package com.surenpi.autotest.webui.core;
  */
 public enum LocatorType
 {
-	BY_ID, BY_NAME, BY_XPATH, BY_TAGNAME, BY_CSS,
-	BY_LINK_TEXT,
-	BY_PARTIAL_LINK_TEXT;
+	BY_ID("byId"),
+	/** 根据标签属性name */
+	BY_NAME("byName"),
+	BY_XPATH("byXpath"),
+	/** 根据标签名称 */
+	BY_TAGNAME("byTagName"),
+	BY_CSS("byCss"),
+	BY_LINK_TEXT("byLinkText"),
+	BY_PARTIAL_LINK_TEXT("byPartialLinkText"),
+	
+	/** 根据iframe框架序号，从0开始 */
+	BY_FRAME_INDEX("byIFrameIndex"),
+	/** 根据iframe框架名称 */
+	BY_FRAME_NAME("byIFrame");
+	
+	private String name;
+	
+	LocatorType(String name)
+	{
+		this.name = name;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
+	}
 }

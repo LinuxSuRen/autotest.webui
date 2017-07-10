@@ -26,9 +26,32 @@ package com.surenpi.autotest.webui.core;
 public enum StrategyType
 {
 	/** 优先级 */
-	PRIORITY,
+	PRIORITY("priority"),
 	/** 循环 */
-	CYLE,
+	CYLE("cyle"),
 	/** 区域 */
-	ZONE;
+	ZONE("zone");
+	
+	private String name;
+	
+	private StrategyType(String name)
+	{
+		this.name = name;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
+	}
 }
