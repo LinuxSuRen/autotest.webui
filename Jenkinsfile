@@ -36,3 +36,20 @@ node {
     }
   }
 }
+
+properties([
+    [
+        $class: 'GithubProjectProperty',
+        displayName: 'autotest.webui',
+        projectUrlStr: 'https://github.com/LinuxSuRen/autotest.webui'
+    ],
+    buildDiscarder(
+        logRotator(
+            artifactDaysToKeepStr: '',
+            artifactNumToKeepStr: '',
+            daysToKeepStr: '7',
+            numToKeepStr: '14'
+        )
+    ),
+    pipelineTriggers([])
+])
