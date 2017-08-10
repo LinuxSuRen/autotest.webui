@@ -35,6 +35,9 @@ public enum LocatorType
 	BY_LINK_TEXT("byLinkText"),
 	BY_PARTIAL_LINK_TEXT("byPartialLinkText"),
 	
+	/** 根据属性定位 */
+	BY_X_ATTR("byXAttr"),
+	
 	/** 根据iframe框架序号，从0开始 */
 	BY_FRAME_INDEX("byIFrameIndex"),
 	/** 根据iframe框架名称 */

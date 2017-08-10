@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>autotest.webui</artifactId>
-    <version>1.0.0-20170722</version>
+    <version>1.0.0-20170722-SNAPSHOT</version>
     
 	<build>
 		<plugins>
