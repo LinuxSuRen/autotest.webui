@@ -4,7 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.surenpi.autotest</groupId>
+    <parent>
+        <groupId>com.surenpi.autotest</groupId>
+        <artifactId>autotest.parent</artifactId>
+        <version>1.0.1-20170618</version>
+    </parent>
+
     <artifactId>autotest.webui</artifactId>
     <version>1.0.0-20170722</version>
     
@@ -30,12 +35,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-    <parent>
-        <groupId>com.surenpi.autotest</groupId>
-        <artifactId>autotest.parent</artifactId>
-        <version>1.0.1-20170618</version>
-    </parent>
 
     <dependencies>
         <dependency>
