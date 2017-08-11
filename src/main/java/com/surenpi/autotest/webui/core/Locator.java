@@ -25,6 +25,9 @@ package com.surenpi.autotest.webui.core;
  */
 public interface Locator
 {
+    int EQUAL = 0x1;
+    int LIKE = 0x2;
+    
 	/**
 	 * @return 定位类型
 	 */
