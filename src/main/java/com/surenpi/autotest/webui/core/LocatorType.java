@@ -37,6 +37,8 @@ public enum LocatorType
 	
 	/** 根据属性定位 */
 	BY_X_ATTR("byXAttr"),
+	/** 根据文本定位 */
+	BY_X_TEXT("byXText"),
 	
 	/** 根据iframe框架序号，从0开始 */
 	BY_FRAME_INDEX("byIFrameIndex"),
