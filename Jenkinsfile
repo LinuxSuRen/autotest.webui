@@ -22,9 +22,9 @@ node {
   
   stage('Build') {
     if(isUnix()){
-      sh "'${mvnHome}/bin/mvn' clean package"
+      sh "'${mvnHome}/bin/mvn' --update-snapshots clean package"
     }else{
-      bat(/"${mvnHome}\bin\mvn" clean package/)
+      bat(/"${mvnHome}\bin\mvn" --update-snapshots clean package/)
     }
   }
   
