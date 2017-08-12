@@ -17,6 +17,7 @@
 package com.surenpi.autotest.webui.core;
 
 /**
+ * webui自动化测试驱动接口
  * @author suren
  * @date 2017年7月5日 上午10:26:35
  */
@@ -24,17 +25,19 @@ public interface WebUIEngine
 {
 	/**
 	 * 获取Page页面子类
-	 * @param type
+	 * @param page
 	 * @return
 	 */
-	<T> T getPage(Class<T> type);
+	<T> T getPage(Class<T> page);
 	
 	/**
 	 * 获取模块类
-	 * @param type
+	 * @param module
 	 * @return
 	 */
-	<T> T getModule(Class<T> type);
+	<T> T getModule(Class<T> module);
+	
+	<T> T getForm(Class<T> form);
 	
 	/**
 	 * 打开浏览器地址
