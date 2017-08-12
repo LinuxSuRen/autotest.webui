@@ -17,11 +17,17 @@
 package com.surenpi.autotest.webui.action;
 
 import com.surenpi.autotest.webui.core.ElementFilterable;
+import com.surenpi.autotest.webui.ui.Element;
 
 /**
  * @author suren
  * @since 2017年8月11日 下午5:27:02
  */
-public interface MultiValueEditor extends ValueEditor, ElementFilterable
+public interface MultiValueEditor extends ElementFilterable<MultiValueEditor>
 {
+    /**
+     * 设置值（清空原有值）
+     * @param value
+     */
+    void setValue(Element ele, Object value);
 }

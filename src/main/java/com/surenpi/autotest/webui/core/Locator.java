@@ -41,4 +41,6 @@ public interface Locator
 	 * @return 元素定位等待的超时时间
 	 */
 	long getTimeout();
+	
+	int getOrder();
 }

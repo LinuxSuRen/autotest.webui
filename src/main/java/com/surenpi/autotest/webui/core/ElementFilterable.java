@@ -20,7 +20,7 @@ package com.surenpi.autotest.webui.core;
  * @author suren
  * @since 2017年8月11日 下午4:05:53
  */
-public interface ElementFilterable
+public interface ElementFilterable<T>
 {
-    void setFilter(ElementFilter filter);
+    T setFilter(ElementFilter filter);
 }

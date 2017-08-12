@@ -16,37 +16,64 @@
 
 package com.surenpi.autotest.webui.ui.multi;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import com.surenpi.autotest.webui.action.MultiValueEditor;
 import com.surenpi.autotest.webui.core.ElementFilter;
 import com.surenpi.autotest.webui.core.ElementFilterable;
-import com.surenpi.autotest.webui.ui.Text;
+import com.surenpi.autotest.webui.ui.AbstractElement;
 
 /**
  * @author suren
  * @since 2017年8月11日 下午4:55:03
  */
-public class Texts extends Text implements ElementFilterable
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class Texts extends AbstractElement implements ElementFilterable<Texts>
 {
     private ElementFilter filter;
+    
+    @Autowired
+    private MultiValueEditor multiValueEditor;
 
     @Override
-    public void setFilter(ElementFilter filter)
+    public Texts setFilter(ElementFilter filter)
     {
         this.filter = filter;
+        return this;
     }
 
-    @Override
-    public Text fillValue(String value)
+    public Texts fillValue(String value)
     {
-//        filter.filter(lis);
+        multiValueEditor.setFilter(filter);
+        multiValueEditor.setValue(this, value);
         
-        return super.fillValue(value);
+        return this;
+    }
+
+    public Texts fillValue()
+    {
+        multiValueEditor.setFilter(filter);
+//        multiValueEditor.setValue(this, getValue());
+        
+        return this;
     }
 
     @Override
-    public Text fillValue()
+    public boolean isEnabled()
     {
         // TODO Auto-generated method stub
-        return super.fillValue();
+        return false;
+    }
+
+    @Override
+    public boolean isHidden()
+    {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 }

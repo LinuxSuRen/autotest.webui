@@ -42,4 +42,6 @@ public interface LocatorAware
 	 * @param extend
 	 */
 	void setExtend(String extend);
+	
+	void setOrder(int order);
 }
