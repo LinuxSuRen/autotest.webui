@@ -17,6 +17,7 @@
 package com.surenpi.autotest.webui;
 
 /**
+ * 表示对一个表单的封装
  * @author suren
  * @date Aug 12, 2017 6:05:27 PM
  */
