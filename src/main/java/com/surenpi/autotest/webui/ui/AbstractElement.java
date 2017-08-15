@@ -18,19 +18,18 @@
 
 package com.surenpi.autotest.webui.ui;
 
-import com.surenpi.autotest.webui.core.Locator;
-import com.surenpi.autotest.webui.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.surenpi.autotest.utils.StringUtils;
+import com.surenpi.autotest.webui.core.Locator;
+
 /**
  * 所有HTML页面元素的抽象， 包含了元素的id、name、tagName、css、xpath、linktext、partialLinkText等属性
  * 
- * @author suren
- * @since jdk1.6 2016年6月30日
+ * @author <a href="http://surenpi.com">suren</a>
  */
 public abstract class AbstractElement implements Element
 {
@@ -45,7 +44,7 @@ public abstract class AbstractElement implements Element
 	private String							strategy;
 	/** 用于保存元素对象相关的数据 */
 	private Map<String, Object>				data = new HashMap<String, Object>();
-	private String paramPrefix;
+	private String paramPrefix = "";
 	private long							timeOut;
 	private int								index;
 

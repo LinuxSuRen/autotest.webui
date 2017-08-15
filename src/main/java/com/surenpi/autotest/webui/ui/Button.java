@@ -18,24 +18,24 @@
 
 package com.surenpi.autotest.webui.ui;
 
-import com.surenpi.autotest.webui.action.ClickAble;
-import com.surenpi.autotest.webui.action.HoverAble;
-import com.surenpi.autotest.webui.action.SequenceAble;
-import com.surenpi.autotest.webui.util.StringUtils;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.surenpi.autotest.utils.StringUtils;
+import com.surenpi.autotest.webui.action.ClickAble;
+import com.surenpi.autotest.webui.action.HoverAble;
+import com.surenpi.autotest.webui.action.SequenceAble;
 
 /**
  * 代表HTML页面中的按钮，即在xml配置文件中type值为button的元素
  * 
- * @author suren
- * @since jdk1.6 2016年6月29日
+ * @author <a href="http://surenpi.com">suren</a>
  */
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)

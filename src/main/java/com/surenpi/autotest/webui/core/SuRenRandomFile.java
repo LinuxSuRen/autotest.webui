@@ -18,14 +18,14 @@
 
 package com.surenpi.autotest.webui.core;
 
-import com.surenpi.autotest.webui.util.PathUtil;
-import com.surenpi.autotest.webui.util.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.surenpi.autotest.utils.PathUtil;
 
 /**
  * 默认提供的随机文件生成类

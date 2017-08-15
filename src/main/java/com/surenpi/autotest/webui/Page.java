@@ -25,11 +25,11 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.surenpi.autotest.datasource.DynamicData;
+import com.surenpi.autotest.utils.StringUtils;
 import com.surenpi.autotest.webui.core.Keyboard;
 import com.surenpi.autotest.webui.core.Mouse;
 import com.surenpi.autotest.webui.ui.Button;
 import com.surenpi.autotest.webui.ui.Text;
-import com.surenpi.autotest.webui.util.StringUtils;
 
 /**
  * 对HTML页面的逻辑封装，不一定是一一对应
