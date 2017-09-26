@@ -19,8 +19,10 @@
 package com.surenpi.autotest.webui;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -47,6 +49,8 @@ public abstract class Page
 	/** 用于保存元素对象相关的数据 */
 	private Map<String, Object>				data = new HashMap<String, Object>();
 	private String paramPrefix;
+	
+	private Set<String> dynamicTypeSet = new HashSet<String>();
 
 	@Autowired
 	private Mouse mouse;
@@ -176,11 +180,10 @@ public abstract class Page
 		String result = value;
 		for(DynamicData dynamicData : dynamicDataList)
 		{
-			if("system".equals(dynamicData.getType()))
-			{
-				result = dynamicData.getValue(result);
-				break;
-			}
+		    if(dynamicTypeSet.contains(dynamicData.getType()))
+		    {
+		        result = dynamicData.getValue(result);
+		    }
 		}
 		
 		result = StringUtils.paramTranslate(data, getParamPrefix(), result);
@@ -232,5 +235,14 @@ public abstract class Page
 	public void setParamPrefix(String paramPrefix)
 	{
 		this.paramPrefix = paramPrefix;
+	}
+	
+	/**
+	 * 添加动态数据的类型
+	 * @param dataType
+	 */
+	public void addDynamicType(String dataType)
+	{
+	    this.dynamicTypeSet.add(dataType);
 	}
 }
