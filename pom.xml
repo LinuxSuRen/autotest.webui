@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.surenpi.autotest</groupId>
         <artifactId>autotest.parent</artifactId>
-        <version>1.0.1-20170618</version>
+        <version>1.0.1-20170818</version>
     </parent>
 
     <artifactId>autotest.webui</artifactId>
@@ -33,6 +33,27 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${signSkip}</skip>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
