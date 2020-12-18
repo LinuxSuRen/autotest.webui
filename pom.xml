@@ -49,7 +49,7 @@
         </dependency>
         <dependency>
         	<groupId>com.surenpi.autotest</groupId>
-        	<artifactId>autotest.webui</artifactId>
+        	<artifactId>autotest.utils</artifactId>
 			<version>1.0.1</version>
         </dependency>
 
