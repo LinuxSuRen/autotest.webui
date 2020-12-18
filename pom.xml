@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>autotest.webui</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:git@github.com:LinuxSuRen/autotest.webui</connection>
