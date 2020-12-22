@@ -38,7 +38,7 @@ import com.surenpi.autotest.webui.ui.Text;
  * @author suren
  * @date Jul 17, 2016 9:06:52 AM
  */
-public abstract class Page
+public abstract class Page implements PageConditions
 {
 	/** 页面唯一标示 */
 	private String			id;
